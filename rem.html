@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+<section id="header">
+  <div class="image">
+    <img src="https://ooo.0o0.ooo/2017/05/21/59213e6041b07.png" alt="">
+  </div>
+  <div class="nav">
+    <span>标签1</span>
+    <span>标签2</span>
+    <span>标签3</span>
+    <span>标签4</span>
+  </div>
+</section>
+<section id="description">
+  <h2>标题标题标题</h2>
+  <h2>标题标题标题</h2>
+  <p>描述描述描述描述描述描述描述</p>
+  <p>描述描述描述描述描述描述描述</p>
+</section>
+<style>
+  body{
+  background: #fff;
+  font-size:0.5rem;
+  margin:0;
+}
+#header {
+  text-align: center;
+  border-bottom:1px solid red;
+}
+
+#header .image img{
+  width: 3.125rem;
+  height:3.125rem;
+  background: #d8d8d8;
+  border-radius: 50%;
+  margin-top:1.875rem;
+  margin-bottom:1.0625rem;
+  margin-left:auto;
+  margin-right:auto;
+  border:1px solid red;
+}
+#header .nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+#header span {
+  background: #d8d8d8;
+  width: 4rem;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  margin: 0 0 0.75rem;
+}
+#description {
+  background: #efefef;
+  text-align: center;
+  padding: 1.5625rem 0 0.9375rem;
+}
+#description h2 {
+  display:inline-block;
+  background: #d8d8d8;
+  width: 6.25rem;
+  margin:0 0 0.625rem;
+  border-radius: 0.4375rem;
+  height:1.25rem;
+  line-height: 1.25rem;
+}
+#description p {
+  background: #e8e8e8;
+  width: 7.8125rem;
+  display: inline-block;
+  margin: 0 0 0.625rem;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  border-radius: 0.435rem;
+}
+</style>
+  
+<script>
+    var scale = 1 / window.devicePixelRatio
+    console.log('scale '+scale)
+    document.write(`<meta name="viewport" content="initial-scale=${scale}, user-scalable=no, maximum-scale=${scale}, minimum-scale=${scale}">`)
+</script>
+  
+<script>
+    var width = document.documentElement.clientWidth / window.devicePixelRatio
+    console.log('document.documentElement.clientWidth '+document.documentElement.clientWidth)
+    console.log('window.devicePixelRatio '+window.devicePixelRatio)
+    console.log('width '+width)
+    var css = `
+    html{
+    font-size: ${width / 10 * window.devicePixelRatio}px;
+    }    
+    `
+    document.write(`<style>${css}`)
+    /*
+    html{(1rem == font-size:320*(width/320)/10) == width / 10}px;
+    10rem = width(页面宽度);
+    换算所有单位都用rem;(所有长度都以页面宽度为基准)
+    最后页面可以兼容任何手机屏宽
+    */
+</script>
+</body>
+</html>
