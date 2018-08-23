@@ -47,4 +47,4 @@
  - 最后页面可以兼容任何移动端屏宽
 
   - 完整的meta例子：
- -  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0;minimum-scale=1.0">
+ ```<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0;minimum-scale=1.0">```
